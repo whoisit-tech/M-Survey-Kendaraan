@@ -4,6 +4,7 @@ import datetime
 
 # Load data
 df = pd.read_excel("msurvey_kendaraan.xlsx")
+
 # Konversi tanggal
 df['tglOrder'] = pd.to_datetime(df['tglOrder'], errors='coerce')
 df['tglmasukBM'] = pd.to_datetime(df['tglmasukBM'], errors='coerce')
