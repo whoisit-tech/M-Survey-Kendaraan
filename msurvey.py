@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-from datetime import datetime, timedelta
+import datetime
 
 # Load data
-FILE_NAME = "msurvey_kendaraan.xlsx"
+df = pd.read_excel("msurvey_kendaraan.xlsx")
 
 # Konversi tanggal
 df['tglOrder'] = pd.to_datetime(df['tglOrder'], errors='coerce')
