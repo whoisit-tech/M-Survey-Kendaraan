@@ -3,7 +3,11 @@ import pandas as pd
 import datetime
 
 # Load data
-df = pd.read_excel("msurvey_kendaraan.xlsx", engine="openpyxl")
+uploaded_file = st.file_uploader("Upload file Excel", type=["xlsx"])
+
+if uploaded_file:
+    df = pd.read_excel(uploaded_file)
+    st.write(df.head())
 
 # Konversi tanggal
 df['tglOrder'] = pd.to_datetime(df['tglOrder'], errors='coerce')
