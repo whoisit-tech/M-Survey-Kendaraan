@@ -51,7 +51,7 @@ df['sla_survey'] = df.apply(
     if pd.notna(r['tglOrder']) and pd.notna(r['TglReportIn']) else None,
     axis=1
 )
-'''
+
 df['sla_submit'] = df.apply(
     lambda r: hitung_jam_kerja(
         r['TglReportIn'], r['tglmasukBM'], libur_nasional
@@ -59,7 +59,7 @@ df['sla_submit'] = df.apply(
     if pd.notna(r['TglReportIn']) and pd.notna(r['tglmasukBM']) else None,
     axis=1
 )
-'''
+
 df['sla_approve'] = df.apply(
     lambda r: hitung_jam_kerja(
         r['TglReportIn'], r['TglApproval'], libur_nasional
