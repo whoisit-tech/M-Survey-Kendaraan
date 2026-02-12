@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 
 # Load data
-df = pd.read_excel("msurvey_kendaraan.xlsx")
+FILE_NAME = "msurvey_kendaraan.xlsx"
 
 # Konversi tanggal
 df['tglOrder'] = pd.to_datetime(df['tglOrder'], errors='coerce')
